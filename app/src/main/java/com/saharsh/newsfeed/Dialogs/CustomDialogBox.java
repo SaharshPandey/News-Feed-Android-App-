@@ -1,6 +1,5 @@
-package com.example.nickelfoxassignment.Dialogs;
+package com.saharsh.newsfeed.Dialogs;
 
-import android.app.Activity;
 import android.app.Dialog;
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -8,17 +7,14 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.Window;
-import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.example.nickelfoxassignment.Fragments.BaseDialogFragment;
-import com.example.nickelfoxassignment.R;
+import com.saharsh.newsfeed.Fragments.BaseDialogFragment;
+import com.saharsh.newsfeed.R;
 import com.squareup.picasso.Picasso;
 
 //Custom Dialog Box to show news in details...

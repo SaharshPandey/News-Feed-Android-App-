@@ -1,6 +1,4 @@
-package com.example.nickelfoxassignment;
-
-import com.android.volley.toolbox.ImageLoader;
+package com.saharsh.newsfeed;
 
 import com.android.volley.toolbox.ImageLoader.ImageCache;
 

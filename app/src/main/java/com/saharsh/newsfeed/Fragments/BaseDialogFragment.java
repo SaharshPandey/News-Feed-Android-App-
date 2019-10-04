@@ -1,4 +1,4 @@
-package com.example.nickelfoxassignment.Fragments;
+package com.saharsh.newsfeed.Fragments;
 
 
 import android.content.Context;

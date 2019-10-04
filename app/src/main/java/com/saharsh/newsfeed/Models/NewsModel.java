@@ -1,4 +1,4 @@
-package com.example.nickelfoxassignment.Models;
+package com.saharsh.newsfeed.Models;
 
 public class NewsModel {
     private String news_title, news_desc, news_content,

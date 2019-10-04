@@ -1,4 +1,4 @@
-package com.example.nickelfoxassignment;
+package com.saharsh.newsfeed;
 
 import android.app.ProgressDialog;
 import android.graphics.Typeface;
@@ -20,8 +20,8 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.VolleyLog;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.example.nickelfoxassignment.Adapters.NewsAdapterFeed;
-import com.example.nickelfoxassignment.Models.NewsModel;
+import com.saharsh.newsfeed.Adapters.NewsAdapterFeed;
+import com.saharsh.newsfeed.Models.NewsModel;
 
 import org.json.JSONArray;
 import org.json.JSONException;

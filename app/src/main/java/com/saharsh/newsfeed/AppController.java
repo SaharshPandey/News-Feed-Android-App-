@@ -1,4 +1,4 @@
-package com.example.nickelfoxassignment;
+package com.saharsh.newsfeed;
 
 import android.app.Application;
 import android.text.TextUtils;

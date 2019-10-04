@@ -1,4 +1,4 @@
-package com.example.nickelfoxassignment;
+package com.saharsh.newsfeed;
 
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -12,8 +12,8 @@ import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.example.nickelfoxassignment.Adapters.MyRecyclerViewAdapter;
-import com.example.nickelfoxassignment.Models.SourceModel;
+import com.saharsh.newsfeed.Adapters.MyRecyclerViewAdapter;
+import com.saharsh.newsfeed.Models.SourceModel;
 
 import java.util.ArrayList;
 

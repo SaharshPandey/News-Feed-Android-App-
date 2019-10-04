@@ -1,4 +1,4 @@
-package com.example.nickelfoxassignment;
+package com.saharsh.newsfeed;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;

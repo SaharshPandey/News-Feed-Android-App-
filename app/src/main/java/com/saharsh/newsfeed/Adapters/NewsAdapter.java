@@ -1,4 +1,4 @@
-package com.example.nickelfoxassignment.Adapters;
+package com.saharsh.newsfeed.Adapters;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,37 +10,41 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
-import com.example.nickelfoxassignment.Dialogs.CustomDialogBox;
-import com.example.nickelfoxassignment.Models.NewsModel;
-import com.example.nickelfoxassignment.R;
+import com.saharsh.newsfeed.Dialogs.CustomDialogBox;
+import com.saharsh.newsfeed.Models.NewsModel;
+import com.saharsh.newsfeed.R;
 import com.squareup.picasso.Picasso;
 
 import java.util.List;
 
-public class NewsAdapterFeed extends RecyclerView.Adapter<NewsAdapterFeed.ViewHolder> {
+import de.hdodenhof.circleimageview.CircleImageView;
+
+
+//News Adapter holds channels and categories data...
+
+public class NewsAdapter extends RecyclerView.Adapter<NewsAdapter.ViewHolder> {
 
     private Context context;
     private Activity activity;
     private List<NewsModel> list;
     Typeface MR, MRR;
 
-    public NewsAdapterFeed(Activity activity, Context context, List<NewsModel> list) {
+    public NewsAdapter(Activity activity, Context context, List<NewsModel> list) {
         this.context = context;
         this.list = list;
         this.activity = activity;
 
-        //Instantiating TypeFaces...
+        //Instantiating Typefaces...
         MRR = Typeface.createFromAsset(activity.getAssets(), "fonts/myriadregular.ttf");
         MR = Typeface.createFromAsset(activity.getAssets(), "fonts/myriad.ttf");
     }
 
     @Override
     public ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(context).inflate(R.layout.all_news_layout, parent, false);
+        View v = LayoutInflater.from(context).inflate(R.layout.single_item, parent, false);
         return new ViewHolder(v);
     }
 
@@ -49,17 +53,15 @@ public class NewsAdapterFeed extends RecyclerView.Adapter<NewsAdapterFeed.ViewHo
         final NewsModel newsModel = list.get(position);
 
         holder.news_title.setText(newsModel.getNews_title());
-        holder.news_time.setText("Published on "+newsModel.getNews_time());
-        holder.news_desc.setText(newsModel.getNews_desc());
+        holder.news_time.setText(newsModel.getNews_time());
 
         holder.news_title.setTypeface(MR);
         holder.news_time.setTypeface(MRR);
 
         if(newsModel.getNews_urlToImage()!= null && !newsModel.getNews_urlToImage().isEmpty()) {
-            //Using Picasso to Load Images....
             Picasso.with(context).load(newsModel.getNews_urlToImage()).placeholder(R.drawable.newspaper).into(holder.news_image);
         }
-        holder.news_layout.setOnClickListener(new View.OnClickListener() {
+        holder.layout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -87,9 +89,9 @@ public class NewsAdapterFeed extends RecyclerView.Adapter<NewsAdapterFeed.ViewHo
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public TextView news_title, news_time, news_desc;
-        public ImageView news_image;
-        public LinearLayout news_layout;
+        public TextView news_title, news_time;
+        public CircleImageView news_image;
+        public RelativeLayout layout;
 
         public ViewHolder(View itemView) {
             super(itemView);
@@ -97,8 +99,7 @@ public class NewsAdapterFeed extends RecyclerView.Adapter<NewsAdapterFeed.ViewHo
             news_title = itemView.findViewById(R.id.news_title);
             news_image = itemView.findViewById(R.id.news_image);
             news_time = itemView.findViewById(R.id.news_time);
-            news_layout = itemView.findViewById(R.id.news_layout);
-            news_desc = itemView.findViewById(R.id.news_desc);
+            layout = itemView.findViewById(R.id.layout);
         }
     }
 
@@ -121,6 +122,8 @@ public class NewsAdapterFeed extends RecyclerView.Adapter<NewsAdapterFeed.ViewHo
 
         transaction.commitAllowingStateLoss();
     }
+
+
 
 
 }

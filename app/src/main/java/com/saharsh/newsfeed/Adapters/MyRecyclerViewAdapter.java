@@ -1,4 +1,4 @@
-package com.example.nickelfoxassignment.Adapters;
+package com.saharsh.newsfeed.Adapters;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Typeface;
@@ -9,9 +9,9 @@ import android.view.ViewGroup;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
-import com.example.nickelfoxassignment.MainActivity;
-import com.example.nickelfoxassignment.Models.SourceModel;
-import com.example.nickelfoxassignment.R;
+import com.saharsh.newsfeed.MainActivity;
+import com.saharsh.newsfeed.Models.SourceModel;
+import com.saharsh.newsfeed.R;
 
 import java.util.List;
 

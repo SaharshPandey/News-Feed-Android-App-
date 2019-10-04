@@ -1,4 +1,4 @@
-package com.example.nickelfoxassignment.Models;
+package com.saharsh.newsfeed.Models;
 
 public class SourceModel {
     private String source_name, source_id;
